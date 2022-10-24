@@ -1,0 +1,851 @@
+/*
+Template name: Funny Mugs
+Version: 1.0
+Description: Template eCommerce for mugs print on demand
+Author: Emma Yendis
+Authon URI: https://www.linkedin.com/in/emma-yendis/
+Version: 1.0
+Requires at least: 6.0.1
+Tested up to: 6.0.1
+Requires PHP: 8.0
+License: GNU General Public Licence v2 or later
+License: http://www.gnu.org/licenses/gpl-2.0.html
+
+*/
+
+/*pre-styles*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    font-size: 1.5rem;
+    background-color: whitesmoke;
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+h1, h2 {
+    font-size: 2.5rem;
+}
+a {
+    color: black; 
+}
+a:hover{
+    color: grey;
+}
+img {
+    max-width: 100%;
+}
+footer{
+    background-color: rgb(190, 35, 151);
+}
+
+/*Utility classes*/
+.wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.wrapper-container{                 
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: center;
+    justify-content: space-around;
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+
+/*Header and Main Menu*/
+.primary-header{
+    background-color: white;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    z-index: 100;
+    -webkit-box-shadow: -2px 3px 3px 0px rgb(190, 35, 151);
+    -moz-box-shadow: -2px 3px 3px 0px rgb(190, 35, 151);
+    box-shadow: -4px 1.5px 1.5px 0px rgb(162, 136, 187);
+}
+.nav-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    order: 1;
+}
+.logo img{
+    max-width:95%
+}
+
+.cart-section{
+    order: 3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cart-section img{
+    max-width: 2.5rem;
+}
+
+.cart-section li{
+    padding-right: 1rem;
+
+}
+
+.visually-hidden {
+    position: absolute;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+}
+.mobile-nav-toggle{
+    display: none;
+}
+
+.primary-nav {
+    order: 2;
+    width: 30vw;
+    margin-right: 20rem;
+}
+
+.nav-list{
+    display: flex;
+    justify-content: space-around;
+}
+
+/*Background Header*/
+
+.main-container{
+    display: flex;
+    flex-flow: column;
+}
+
+.header-background-container{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 7.5rem;
+    background-image: url(./assets/img/header-funny-mugs-for-work.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50rem;
+    background-position: 0rem -15rem;
+    background-color: transparent;
+    padding-left:2rem;
+    padding-right: 2rem;
+}
+
+.background{
+    justify-content: center;
+    width: 50vw;
+    height: 40vh;
+    background-color: white;
+    border-radius: 2rem;
+}
+
+.greetings{
+    color: rgb(190, 35, 151);
+    font-weight: bold;
+    padding-bottom: 2.5rem;
+}
+
+.title{
+    padding-bottom: 1.5rem;
+}
+
+.enter-shop{
+    align-self: center;
+    width: 10rem;
+    background-color:rgb(190, 35, 151);
+    border-color: transparent;
+    border-radius: 5rem;
+    border-width: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: .5rem;
+    padding-bottom:.5rem;
+    transition: 250ms ease;
+}
+.same-enter-shop, .enter-shop a{
+    color: white;
+    font-size: 1.5rem;
+}
+.enter-shop:hover{
+    box-shadow: 0 5px 8px plum;
+    border-color: #dfe1e500;
+    transform: scale(1.05);
+    margin-top: -1;
+}
+
+/*Mug and Tumblers Categories*/
+.category-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+}
+
+.category-mug-container{
+    display: flex;
+    justify-content: space-between;
+    height: 18rem;
+    width: 55rem;
+    background-color: rgb(190, 35, 151);
+    margin-right: 2.5rem;
+    margin-left: 2.5rem;
+    border-radius: 2rem;
+} 
+.category-tumbler-container{
+    display: flex;
+    justify-content: space-between;
+    height: 18rem;
+    width: 55rem;
+    background-color: rgb(87, 219, 219);
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    border-radius: 2rem;
+}
+.wrapper-a{
+    align-self: center;
+    padding-right:5rem;
+}
+.wrapper-b{
+    align-self: center;
+    padding-left: 10rem;
+}
+
+.category{
+    align-self: center;
+    color: white;
+    font-weight: bold;
+}
+
+.mug, 
+.tumbler{
+    height: 20rem;
+    width: 20rem;
+}
+
+.mug::before{
+    content:url(/assets/img/mu.png);
+    position: relative;
+    top: -4rem;
+    left: 2rem;
+}
+
+.tumbler::after{
+    content:url(/assets/img/mu.png);
+    position: relative;
+    top: -4rem;
+    right: 3rem;
+}
+
+.same-enter-shop{
+    align-self: center;
+    width: 10rem;
+    background-color:white;
+    border-color: transparent;
+    border-radius: 5rem;
+    border-width: .7rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: .5rem;
+    padding-bottom:.5rem;
+    margin-top: 1px;
+    transition: 250ms ease;
+}
+
+.same-enter-shop:hover{
+    box-shadow: 0 5px 8px plum;
+    border-color: #dfe1e500;
+    transform: scale(1.03);
+    margin-top: -1;
+}
+
+/*Mugs Container*/
+.container-mugs-viewer,
+.container-tumbler-viewer{
+    margin-bottom: 3rem;
+}
+.secondary-header-container{
+    padding-left: 6rem;
+    padding-right: 6rem;
+    margin-bottom: 4rem;
+}
+.secondary-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.view-all {
+    font-weight: 600;
+    color: black;
+    padding-bottom: 3px;
+    padding-top: 1px;
+    border-bottom-color: gainsboro;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;   
+}
+.view-all:hover {
+    text-decoration: none;
+    cursor: pointer;
+    border-bottom-color: rgb(190, 35, 151);
+}
+.secondary-header-line{
+    line-height: 2.4rem;
+    margin-top: 3.2rem;
+    margin-bottom: 3.2rem;
+    background-color: gainsboro;
+    height: 2px;
+}
+.secondary-header-color{
+    background-color: rgb(190, 35, 151);
+    height: 2px;
+    line-height: 2.4rem;
+    width: 14rem;
+}
+
+/*Card products*/
+
+.list-mugs__items,
+.list-tumbler__items{
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 2rem;
+    padding: 5rem;
+    margin: 7px;
+    overflow: hidden;
+    transition: 500ms ease;
+    -webkit-box-shadow: 0px 3px 3px 0px rgb(190, 35, 151);
+    -moz-box-shadow: 0px 3px 3px 0px rgb(190, 35, 151);
+    box-shadow: 0px 1.5px 1.5px 0px rgb(162, 136, 187);
+}
+.list-mugs__items:hover,
+.list-tumbler__items:hover{
+    transform: scale(1.05);
+    margin-top: -1;
+    box-shadow: 0 5px 8px plum;
+    border-color: #dfe1e500;
+}
+.card-item{
+    max-width: 17rem;
+}
+/*Middle header-New Arrivals*/
+.middle-header{
+    height: 45rem;
+    display: flex;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+.new-arrival-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    background-image:url(/assets/img/header-funny-mugs-for.jpg);
+    background-position: 0 -15rem;
+    width: 100vw;
+    background-repeat: repeat;
+    background-size:cover;  
+}
+.title-middle-header{
+    background-color: black;
+    color: white;
+    font-size: 5rem;
+    padding-left: 10rem;
+    padding-right: 2rem;
+    margin-bottom: 2rem;
+}
+
+.shop-new-items{
+    align-self: flex-end;
+    width: 10rem;
+    background-color:white;
+    border-color: transparent;
+    border-radius: 5rem;
+    border-width: .7rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: .5rem;
+    padding-bottom:.5rem;
+    margin-top: 1px;
+    transition: 250ms ease;
+    margin-right: 5rem;
+}
+.shop-new-items:hover{
+    box-shadow: 0 5px 8px plum;
+    border-color: #dfe1e500;
+    transform: scale(1.03);
+    margin-top: -1;
+}
+
+/*Recent Post*/
+.recent-post{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+.blogpost__items{
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.thumbnail-post{
+    background: white;
+}
+
+.text{
+    max-width: 52rem;
+    font-size: 1.5rem;
+}
+
+/*Footer*/
+.container-nav{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+.footer-nav{
+    display: flex;
+    align-items: center;
+    order: 2;
+
+}
+.nav-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 30vw;
+}
+
+.nav-menu a{
+    color: white;
+}
+.social-media-icons{
+    order:3;
+    display: flex;
+    gap:1rem;
+    align-items: center;
+    width: 10vw;
+    padding-right: 2rem;
+}
+.footer-line{
+    margin-left: 2rem;
+    margin-right: 2rem;
+    background-color:rgb(187, 154, 183);
+    height: 1px;
+}
+.credits-and-terms{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: white;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.credits-and-terms a{
+    color: white;
+    font-weight: bold;
+}
+
+.credits, .terms-and-privacy{
+    font-size: 1.2rem;
+}
+
+/*PAGE CATALOG*/
+.main-containers{
+    position:relative;
+    top:7.5rem;
+    margin-bottom: 20rem;
+}
+.breadcrumbs{
+    display: flex;
+    gap: 1rem;
+    margin-left: 6rem;
+    margin-right: 6rem;
+    margin-top: 7rem;
+    margin-bottom: 12rem;
+    border-color: gainsboro;
+    border-radius: 2rem;
+    border-style:solid;
+    border-width: 2px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 3rem;
+}
+
+/*PAGE SINGLE-PRODUCT*/
+.single-item{
+    display: flex;
+    justify-content: center;
+}
+.product{
+    display: flex;
+    background-color: white;
+    border-radius: 2rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    -webkit-box-shadow: 0px 3px 3px 0px rgb(190, 35, 151);
+    -moz-box-shadow: 0px 3px 3px 0px rgb(190, 35, 151);
+    box-shadow: 0px 1.5px 1.5px 0px rgb(162, 136, 187);
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+.product-info{
+    padding-left: 6rem;
+    align-self: center;
+}
+.title-single-item{
+    margin-bottom: 3rem;
+    font-size: 3.5rem;
+}
+.price{
+    margin-top: 2rem;
+    color: rgb(190, 35, 151);
+}
+.add-item{
+    background-color:rgb(190, 35, 151);
+    border-color: transparent;
+    border-radius: 5rem;
+    border-width: 1rem;
+    padding-top: .5rem;
+    padding-bottom:.5rem;
+    margin-top: 2rem;
+    transition: 250ms ease;
+}
+.add-item a{
+    color: white;
+    font-size: 1.5rem;
+}
+.add-item:hover{
+    box-shadow: 0 5px 8px plum;
+    border-color: #dfe1e500;
+    transform: scale(1.03);
+    margin-top: -1;
+}
+.image-item{
+    align-self: center;
+    padding-right: 1rem;
+}
+input{
+    border-radius: 3rem;
+    border: 2px solid;
+    border-color: gainsboro;
+    width: 8rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 1rem;
+    text-align: center;
+    margin-right: 1rem;
+}
+input:focus-visible{
+    outline: rgb(190, 35, 151) 1px;
+    background-color: white;
+    cursor: pointer;
+    border-color: rgb(190, 35, 151);
+}
+
+
+
+
+
+
+/*ALL MEDIA QUERIES*/
+
+@media(max-width: 70em){
+    .header-background-container{       /*Media Queries Background 70em*/
+        background-repeat: no-repeat;
+        height: 50rem;
+        background-position:top
+    }
+    .background{
+        width: 45rem;
+        height: 30rem;
+    }
+    .title{
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+
+    .category-container{               /*Categories 70em*/
+        max-height: 60rem;
+    }
+    .category-mug-container,
+    .category-tumbler-container{        
+        height: 25rem;
+        width: 50rem;
+    }
+
+    .secondary-header-container{        /*Categories 70em*/
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .recent-post{                       /*Recent Post 70em*/
+        flex-direction: column;
+        gap: 5rem;
+    }
+
+    /*PAGE CATALOG*/
+    .breadcrumbs{
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+}
+
+@media(max-width:60em){ 
+    .category-container{                /*Secondary Header 60em*/
+        flex-direction: column;
+        gap: 6rem;
+        margin-top: 8rem;
+        margin-bottom: 8rem;
+        height: 80vh;
+    }
+    .category-mug-container,
+    .category-tumbler-container{       
+        height: 25rem;
+        width: 45rem;
+    }
+
+    /*SINGLE PRODUCT*/
+    .product{
+        flex-direction: column;
+    }
+    .image-item{
+        order: 1;
+    }
+    .product-info{
+        order: 2;
+
+    }
+    
+    /*SINGLE PRODUCT*/
+    .product-info{
+        padding-left: 2rem;
+        padding-right: 2rem;
+        justify-self: center;
+    }
+    .title-single-item{
+        font-size: 2.5rem;
+    }
+    .image-item{
+        padding-right: 3rem;
+    }  
+}
+
+@media(max-width: 50em){  
+    .logo{                              /*Navigation 50em*/
+        order: 1;
+    }
+    .cart-section{
+        order: 2;
+        margin-left: 10vw;
+    }
+    .primary-nav{
+        display: none;
+        position: fixed;
+        inset: 7.5rem 0rem auto;
+        background: white;
+    }
+
+    .nav-list{
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        align-content: center;
+        border-top: 1px solid whitesmoke;
+        border-bottom: 1px solid whitesmoke;
+    }
+
+    .nav-list li{
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        border-bottom: 1px solid whitesmoke;
+    }
+
+    .nav-list li:hover{
+        cursor: pointer;
+        background: rgb(190, 35, 151);
+    }
+
+    .nav-list a:hover{
+        color: white;
+    }
+
+    .primary-nav[data-visible]{
+        display: block;
+        width: 100%;
+        position: fixed;
+    }
+
+    .mobile-nav-toggle{
+        order: 3;
+        display: block;
+        cursor: pointer;
+        background: transparent;
+        border: 0;
+        padding: .5rem;
+    }   
+
+    .mobile-nav-toggle 
+    .icon-close{
+        display: none;
+    }
+
+    .header-background-container{         /*Background Header 50em*/
+        background-repeat: no-repeat;
+        height: 50rem;
+        background-position: top;
+    }
+    .background{
+        width: 35rem;
+        height: 20rem;
+    }
+    .title{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .enter-shop:hover{
+        margin-top: -1px;
+    }
+    .category-container{                  /*Categories 50em*/       
+        height: 100%;
+        margin-top: 10rem;
+        margin-bottom: 10rem;
+    }
+    .category-mug-container,
+    .category-tumbler-container{        
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 35rem;
+        width: 30rem;
+    }
+    .wrapper-b{
+        order: 1;
+        padding-left: 0;
+        margin-bottom: 5rem;
+    }
+    .wrapper-a{
+        padding-right: 0;
+        margin-bottom: 5rem;
+    }
+
+    .mug::before,
+    .tumbler::after{
+        position: relative;
+        top: -3rem;
+        left: 0rem;
+    }
+
+    .list-tumbler, .list-mugs{          /*List-mugs and tumbles 50em*/
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .container-nav{                     /*footer*/
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-nav{
+        height: 9rem;
+    }
+    .menu-footer{
+        padding-left: .5rem;
+        padding-right: .5rem;
+    }
+    .social-media-icons{
+        height: 5rem;
+        width: 20rem;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media(max-width: 25em){
+    .primary-nav{                        /*Navigation 25em*/
+        position: fixed;
+        inset: 5.5rem 0rem auto;
+    }
+
+    .header-background-container{        /*Background 25em*/
+        background-repeat: no-repeat;
+        height: 30rem;
+        background-position: top;
+    }
+    .background{
+        width: 20rem;
+    
+    }
+    .title{
+        font-size: 20px;
+    }
+    .enter-shop:hover{
+        margin-top: -1px;
+    }
+
+    .category-container{                /*Categories 25em*/
+        margin-top: 10rem;
+        margin-bottom: 10rem;
+    }
+    .category-mug-container,
+    .category-tumbler-container{         
+        height: 30rem;
+        width: 25rem;
+    }
+    .recent-post{                       /*Recent Post 25em*/
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    .secondary-header{
+        display: flex;
+        flex-wrap: wrap;
+    }    
+
+    /*CATALOG PAGE*/
+    .breadcrumbs{
+        margin-top: 2rem;;
+        margin-bottom: 5rem;
+    }
+}
