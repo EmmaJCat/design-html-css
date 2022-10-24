@@ -14,28 +14,28 @@ mugList.push ({
     image: './img/mu.png',
     name: 'Grow up',
     price: 15,
-    link:'./single-item-1.html',
+    link:'single-item-1.html',
 });
 
 mugList.push ({
     image: './img/mu.png',
     name: 'Grow up',
     price: 15,
-    link:'./single-item-2.html',
+    link:'single-item-2.html',
 });
 
 mugList.push ({
     image: './img/mu.png',
     name: 'Grow up',
     price: 15,
-    link:'./single-item-3.html',
+    link:'single-item-3.html',
 });
 
 mugList.push ({
     image: './img/sample-mug-1.png',
     name: 'Rainbow mug',
     price: 15,
-    link:'./single-item-4.html',
+    link:'single-item-4.html',
 });
 
 function renderMugs (stock){
