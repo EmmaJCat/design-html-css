@@ -11,28 +11,28 @@ navToggle.addEventListener('click', () => {
 
 const mugList = [];
 mugList.push ({
-    image: './assets/img/mu.png',
+    image: './img/mu.png',
     name: 'Grow up',
     price: 15,
     link:'/single-item-1.html',
 });
 
 mugList.push ({
-    image: './assets/img/mu.png',
+    image: './img/mu.png',
     name: 'Grow up',
     price: 15,
     link:'/single-item-2.html',
 });
 
 mugList.push ({
-    image: './assets/img/mu.png',
+    image: '/img/mu.png',
     name: 'Grow up',
     price: 15,
     link:'/single-item-3.html',
 });
 
 mugList.push ({
-    image: './assets/img/sample-mug-1.png',
+    image: '/img/sample-mug-1.png',
     name: 'Rainbow mug',
     price: 15,
     link:'/single-item-4.html',
