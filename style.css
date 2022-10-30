@@ -255,18 +255,18 @@ footer{
     width: 20rem;
 }
 
-.mug::before{
-    content:url("./img/mu.png");
+.tumbler::before{
+    content:url("./img/mugs/mug-get-a-life.png");
     position: relative;
     top: -4rem;
-    left: 2rem;
+    left: -4rem;
 }
 
-.tumbler::after{
-    content:url("./img/mu.png");
+.mug::after{
+    content:url("./img/tumblers/yellow-js.png");
     position: relative;
-    top: -4rem;
-    right: 3rem;
+    top: -6rem;
+    right: -2rem;
 }
 
 .same-enter-shop{
@@ -360,7 +360,7 @@ footer{
     border-color: #dfe1e500;
 }
 .card-item{
-    max-width: 17rem;
+    max-width: 20rem;
 }
 /*Middle header-New Arrivals*/
 .middle-header{
@@ -531,7 +531,7 @@ footer{
     padding-bottom: 4rem;
 }
 .product-info{
-    padding-left: 6rem;
+    padding-left: 4rem;
     align-self: center;
 }
 .title-single-item{
@@ -563,8 +563,12 @@ footer{
     margin-top: -1;
 }
 .image-item{
-    align-self: center;
-    padding-right: 1rem;
+    justify-self: left;
+    padding-right: 3rem;
+    min-width: 50%;
+}
+.picture-product{
+    min-width: 100%;
 }
 input{
     border-radius: 3rem;
